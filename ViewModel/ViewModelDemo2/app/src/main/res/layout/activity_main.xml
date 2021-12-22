@@ -12,22 +12,24 @@
             android:id="@+id/input_edit_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="32dp"
             android:hint="add Number"
             android:inputType="number"
-            android:textSize="66sp"
+            android:textSize="50sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.083" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="56dp"
-            android:layout_marginTop="40dp"
-            android:text="Click Here"
+            android:layout_marginTop="24dp"
+            android:text="Add"
             android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/input_edit_text" />
 
@@ -35,11 +37,11 @@
             android:id="@+id/count_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="77dp"
-            android:layout_marginTop="52dp"
-            android:textSize="66sp"
+            android:layout_marginTop="24dp"
+            android:textSize="30sp"
             android:textStyle="bold"
             android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="@+id/button"
             app:layout_constraintStart_toStartOf="@+id/button"
             app:layout_constraintTop_toBottomOf="@+id/button" />
 
