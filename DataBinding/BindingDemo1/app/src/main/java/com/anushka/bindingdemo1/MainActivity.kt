@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+
+
     private fun displayGreeting() {
 //        val messageView = findViewById<TextView>(R.id.greeting_text_view)
 //        val nameText = findViewById<EditText>(R.id.name_edit_text)

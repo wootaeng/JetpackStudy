@@ -1,0 +1,34 @@
+package com.anushka.viewmodeldemo2
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import com.anushka.viewmodeldemo2.databinding.ActivityMainBinding
+
+class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var viewModel: MainActivityViewModel
+    private lateinit var viewModelFactory: MainActivityViewModelFactory
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        viewModelFactory = MainActivityViewModelFactory(125)
+        viewModel = ViewModelProvider(this,viewModelFactory).get(MainActivityViewModel::class.java)
+
+//        viewModel.totalData.observe(this, Observer {
+//            binding.resultTextView.text = it.toString()
+//        })
+        //양방향 통신으로 변경
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
+
+        // 버튼은 레이아웃의 onClick 으로 대체
+//        binding.insertButton.setOnClickListener {
+//            viewModel.setTotal(binding.inputEditText.text.toString().toInt())
+//        }
+
+
+    }
+}
