@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homFragment">
+
+    <fragment
+        android:id="@+id/homFragment"
+        android:name="com.ws.skelton.navdemo2.HomFragment"
+        android:label="fragment_hom"
+        tools:layout="@layout/fragment_hom" >
+        <action
+            android:id="@+id/action_homFragment_to_termsFragment"
+            app:destination="@id/termsFragment"
+            app:enterAnim="@anim/push_up_in"
+            app:exitAnim="@anim/push_down_out"
+            app:popEnterAnim="@anim/push_down_in"
+            app:popExitAnim="@anim/push_up_out" />
+        <action
+            android:id="@+id/action_homFragment_to_signNameFragment"
+            app:destination="@id/signNameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.ws.skelton.navdemo2.TermsFragment"
+        android:label="fragment_terms"
+        tools:layout="@layout/fragment_terms" />
+    <fragment
+        android:id="@+id/signNameFragment"
+        android:name="com.ws.skelton.navdemo2.SignNameFragment"
+        android:label="fragment_sign_name"
+        tools:layout="@layout/fragment_sign_name" >
+        <action
+            android:id="@+id/action_signNameFragment_to_signEmailFragment"
+            app:destination="@id/signEmailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/signEmailFragment"
+        android:name="com.ws.skelton.navdemo2.SignEmailFragment"
+        android:label="fragment_sign_email"
+        tools:layout="@layout/fragment_sign_email" >
+        <action
+            android:id="@+id/action_signEmailFragment_to_submitFragment"
+            app:destination="@id/submitFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitFragment"
+        android:name="com.ws.skelton.navdemo2.SubmitFragment"
+        android:label="fragment_submit"
+        tools:layout="@layout/fragment_submit" >
+        <action
+            android:id="@+id/action_submitFragment_to_termsFragment"
+            app:destination="@id/termsFragment"
+            app:enterAnim="@anim/push_down_in"
+            app:exitAnim="@anim/push_up_out"
+            app:popEnterAnim="@anim/push_up_in"
+            app:popExitAnim="@anim/push_down_out" />
+    </fragment>
+</navigation>

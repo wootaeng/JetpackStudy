@@ -24,9 +24,12 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
 
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_second, container, false )
+
+        var input: String? = requireArguments().getString("user_input")
+        binding.textView.text = input.toString()
+
         return binding.root
     }
 
