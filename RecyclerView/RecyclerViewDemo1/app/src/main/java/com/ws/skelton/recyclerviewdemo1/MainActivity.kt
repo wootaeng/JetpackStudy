@@ -3,6 +3,7 @@ package com.ws.skelton.recyclerviewdemo1
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -17,7 +18,12 @@ class MainActivity : AppCompatActivity() {
         val mRecyclerV = findViewById<RecyclerView>(R.id.mRecyclerV)
         mRecyclerV.setBackgroundColor(Color.YELLOW)
         mRecyclerV.layoutManager = LinearLayoutManager(this)
-        mRecyclerV.adapter = MyRecyclerViewAdapter(fruitList)
+        mRecyclerV.adapter = MyRecyclerViewAdapter(fruitList, {selectedFruitItem:Fruit -> listItemClicked(selectedFruitItem)})
 
     }
+
+    private fun listItemClicked(fruit: Fruit){
+        Toast.makeText(this@MainActivity, "Supplier name is ${fruit.supplier}", Toast.LENGTH_LONG).show()
+    }
+
 }
