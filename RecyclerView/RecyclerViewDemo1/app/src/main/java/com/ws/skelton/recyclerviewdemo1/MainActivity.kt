@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    val fruitList = listOf(Fruit("망고","통"),Fruit("사과","조"),Fruit("바나나","석"),Fruit("구아바","석2"),Fruit("레몬","석3"),Fruit("복숭아","석4"),Fruit("오렌지","석5"))
+    val fruitList = listOf(Fruit("망고","통"),Fruit("사과","조"),Fruit("바나나","석"),Fruit("구아바","석3"),Fruit("레몬","석3"),Fruit("복숭아","석4"),Fruit("오렌지","석5"))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
